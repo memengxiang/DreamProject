@@ -1,0 +1,25 @@
+
+#数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/project?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+  thymeleaf:
+    cache: false
+
+
+#Mybatis
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.mx.springboot.entity
+  global-config:
+    db-config:
+      id-type: auto
+
+
+
+logging:
+  level:
+    com.mx.springboot.mapper: trace
